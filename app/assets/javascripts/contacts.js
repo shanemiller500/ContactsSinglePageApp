@@ -30,7 +30,7 @@ $(document).ready(function(){
                             "</div>",
                           "</div>"].join("");
  
-    console.log(contactString);
+    
  
     $("#contacts").append(contactString);
   
@@ -42,7 +42,7 @@ $(document).ready(function(){
     // Prevent the page from reloading
     event.preventDefault();
  
-    //console.log(this);
+    
  
     var name = $("#contact_name").val();
     var email = $("#contact_email").val();
@@ -65,10 +65,15 @@ $(document).ready(function(){
  
  
     contacts.push(newContact);
+ // Array of todos
  
-    // Call a function to add our contact to 
-    //  the page.
     addContact(newContact);
  
+  });
+  $.get('/contacts.json').done(function(data) {
+    contacts = data
+    $.each(contacts, function(index, contact){
+      addContact(contact);
+    });
   });
 });

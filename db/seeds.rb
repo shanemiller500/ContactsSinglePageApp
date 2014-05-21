@@ -5,3 +5,9 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+Contact.create ([
+  {name: 'shane', email:  "shane@shane.com", number:  "123456", img:  "http://old.mathleague.com/help/integers/numline.GIF"},
+{name: 'mike', email:  "mike@mike.com", number:  "123456", img:  "http://old.mathleague.com/help/integers/numline.GIF"},
+
+
+  ]);
